@@ -1,4 +1,4 @@
-#*SAP Omni Channel Banking Customization Workspace*
+#*SAP Omni Channel Banking Enablement Workspace*
 
 ## OCB Customization Template provides simple and efficient way to customize Omni Channel Banking features.
 
