@@ -1,6 +1,6 @@
 #*SAP Omni Channel Banking Enablement Workspace*
 
-## OCB Customization Template provides simple and efficient way to customize Omni Channel Banking features.
+## OCB workspace Template provides simple and efficient way to develop and customize Omni Channel Banking features.
 
 ###  Prerequisites
 
@@ -8,6 +8,8 @@
     - Platform WAR
 - JDK 8
 - Eclipse IDE
+- BndTools 3.3.0 plugin
+- Java Decompiler Plugin
 
 ###Workspace Setup
 
