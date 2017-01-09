@@ -1,0 +1,325 @@
+/*
+ * Master Gradle build script
+ *
+ * Depends on bndPlugin property set by settings.gradle.
+ * and bnd_* values from gradle.properties.
+ */
+
+import aQute.bnd.build.Workspace
+import aQute.bnd.osgi.Constants
+import aQute.bnd.version.Version
+import aQute.bnd.service.RepositoryPlugin
+import aQute.bnd.build.WorkspaceRepository
+
+/* Add bnd gradle plugin as a script dependency */
+buildscript {
+  dependencies {
+    classpath bndPlugin
+  }
+}
+
+/* Initialize the bnd workspace */
+Workspace.setDriver(Constants.BNDDRIVER_GRADLE)
+Workspace.addGestalt(Constants.GESTALT_BATCH, null)
+ext.bndWorkspace = new Workspace(rootDir, bnd_cnf)
+if (bndWorkspace == null) {
+  throw new GradleException("Unable to load workspace ${rootDir}/${bnd_cnf}")
+}
+ext.bndWorkspaceRepo = new WorkspaceRepository(bndWorkspace)
+ext.cnf = rootProject.project(bnd_cnf)
+
+/* Configure the subprojects */
+subprojects {
+  def bndProject = bndWorkspace.getProject(name)
+  if (bndProject != null) {
+    plugins.apply 'biz.aQute.bnd'
+	
+	check.onlyIf{
+		!bndProject.getName().endsWith(".it")
+	}
+	
+	test.onlyIf { Boolean.getBoolean('skip.tests') }
+	
+tasks.addRule('Pattern: exportwar.<name>: Create WAR distribution of runbundles for <name>.bndrun file.') { taskName ->
+		  if (taskName.startsWith('exportwar.')) {
+			  def bndrun = taskName - 'exportwar.'
+			  def runFile = new File(projectDir, "${bndrun}.bndrun")
+			  def cnfProject = rootProject.project(bnd_cnf)
+
+			  if (runFile.isFile()) {
+				  task(taskName) {
+					  description "Export ${bndrun}.bndrun file to ${bndrun}.war "
+					  group 'Export WAR'
+
+					  def warDir =  new File(distsDir, "war")
+					  def warbundlesDir = new File(warDir, "${bndrun}")
+					  def webinfDir = new File(warbundlesDir, "WEB-INF")
+					  def webinfLibDir = new File(webinfDir, "lib")
+					  def osgiDir = new File(webinfDir, "osgi")
+					  def osgiBundlesDir = new File(osgiDir, "bundles")
+					  def osgiConfigDir = new File(osgiDir, "config")
+					  def bndrunWAR = new File(distsDir, "war/${bndrun}.war")
+
+					  outputs.dir warbundlesDir
+					  outputs.file bndrunWAR
+
+					  doFirst {
+						  project.mkdir(warbundlesDir)
+						  project.mkdir(webinfDir)
+						  project.mkdir(webinfLibDir)
+						  project.mkdir(osgiDir)
+						  project.mkdir(osgiBundlesDir)
+						  project.mkdir(osgiConfigDir)
+					  }
+
+					  doLast {
+                          logger.info 'Creating a distribution of the warbundles in {} in directory {}', runFile.absolutePath, warbundlesDir.absolutePath
+
+                          try {
+                              bndProject.exportRunbundles(relativePath(runFile.getName()), osgiBundlesDir)
+                          } catch (Exception e) {
+                              throw new GradleException("Creating a distribution of the warbundles in ${runFile.absolutePath} failed", e)
+                          }
+
+                          /* Delete servlet, jsp and jetty bundles */
+                          def tree = fileTree(osgiBundlesDir)
+                          tree.include 'javax.servlet.jsp*'
+                          tree.include 'javax.servlet*'
+                          tree.include 'org.apache.felix.http.jetty*'
+                          tree.each { it.delete() }
+
+                          copy {
+							  from new File(cnfProject.projectDir, "/config")
+							  into osgiDir
+							  include "framework.properties"
+							  include "system.properties"
+						  }
+
+						  copy {
+							  from new File(cnfProject.projectDir, "/config")
+							  into osgiConfigDir
+							  include "**/*.cfg"
+						  }
+
+                          def webLauncherBundle = null
+						  def fwkBundle = null
+						  def felixProxyBundle = null
+						  for(RepositoryPlugin repo : bndWorkspace.getRepositories()) {
+                              fwkBundle = repo.get("org.apache.felix.framework", new Version(5, 4, 0), null)
+                              felixProxyBundle = repo.get("org.apache.felix.http.proxy", new Version(3, 0, 3), null)
+                              webLauncherBundle = repo.get("com.sap.banking.web-launcher", new Version(8, 3, 2), null)
+                              
+							  if(fwkBundle != null) {
+								  copy {
+								  	from fwkBundle
+									into webinfLibDir
+							  	}
+							  }
+							  if(felixProxyBundle != null){
+								  copy {
+									  from felixProxyBundle
+									  into webinfLibDir
+								  }
+							  }
+                              if(webLauncherBundle != null){
+                                  copy {
+                                      from webLauncherBundle
+                                      into webinfLibDir
+                                  }
+                              }
+                              
+							  if(felixProxyBundle!= null && fwkBundle != null && webLauncherBundle != null){
+								  break;
+							  }
+						  }
+
+						  copy{
+							  from new File(cnfProject.projectDir , "/config")
+							  into webinfDir
+							  include "osgi-bridge-web.xml"
+							  rename "osgi-bridge-web.xml", "web.xml"
+						  }
+
+						  tasks.create (name: "${bndrun}.war", type: Zip) {
+							  extension 'war'
+							  from warbundlesDir
+                              destinationDir warDir
+							  archiveName "${bndrun}.war"
+							  include "*/**"
+						  }
+
+						  tasks["${bndrun}.war"].execute()
+
+					  }
+				  }
+			  }
+		  }
+    }
+
+    task('exportwar') {
+		  description 'Export all the bndrun files to WAR'
+		  group 'Export WAR'
+		  fileTree(projectDir) {
+			  include '*.bndrun'
+		  }.each {
+			  dependsOn tasks.getByPath("exportwar.${it.name - '.bndrun'}")
+		  }
+	  }
+	
+	tasks.build.doLast() {
+	     if(file("build.xml").exists() ) {		  
+	     ant.properties['buildDir'] = bndProject.getName()
+		 ant.properties['rootPath'] = rootProject.projectDir
+	     ant.importBuild  ('build.xml')
+		 ant.antProject.executeTarget('convert.native.resources.files') 
+		 }	
+   }
+
+ 
+  
+  
+  task exportOCBBundles() {
+	   if(bndProject.getName()=='run')    
+	   {
+
+		doLast {
+			def runProject = rootProject.project("run")
+			def warbundlesDir = new File(distsDir, "warbundles")
+
+			def webinfDir = new File(warbundlesDir, "WEB-INF")
+			def webinfLibDir = new File(webinfDir, "lib")
+			def osgiDir = new File(webinfDir, "osgi")
+			def osgiBundlesDir = new File(osgiDir, "bundles")
+
+			def platformbundlesDir = new File(distsDir, "platformbundles")
+			def platfromWebinfDir = new File(platformbundlesDir, "WEB-INF")
+			def platforomOsgiDir = new File(platfromWebinfDir, "osgi")
+			def platformOsgiBundlesDir = new File(platforomOsgiDir, "bundles")
+
+
+            tasks['clean'].execute()
+			tasks['cleanRunbundles.platform-api'].execute()
+			tasks['runbundles.platform-api'].execute()
+			tasks['cleanRunbundles.platform-web'].execute()
+			tasks['runbundles.platform-web'].execute()
+
+			/* copy all api bundles to web-inf/lib */
+			copy {
+				from new File(runProject.projectDir, "/target/distributions/runbundles/platform-api")
+				into webinfLibDir
+				include "*.jar"
+			}
+
+			/* copy all provider bundles to web-inf/osgi/bundles */
+			copy {
+				from new File(runProject.projectDir, "/target/distributions/runbundles/platform-web")
+				into platformOsgiBundlesDir
+				include "*.jar"
+			}
+
+			/* copy all  bundles to web-inf/osgi/platform */
+			copy {
+				from new File(runProject.projectDir, "/target/distributions/runbundles/platform-web")
+				into osgiBundlesDir
+				include "*.jar"
+			}
+			
+				
+		   /* copy  org.eclipse.gemini.blueprint.extender-8.3.2.jar from lib to bundles   */
+		        def blueprintExtenderBundle = null
+				for(RepositoryPlugin repo : bndWorkspace.getRepositories()) {                              
+                              blueprintExtenderBundle = repo.get("org.eclipse.gemini.blueprint.extender", new Version(8, 3, 2), null)
+                                                           
+							  if(blueprintExtenderBundle != null) {
+								  copy {
+								  	from blueprintExtenderBundle
+									into osgiBundlesDir
+							  	}
+							  }
+							                              
+							  if(blueprintExtenderBundle!= null){
+								  break;
+							  }
+						  }
+			
+			
+         
+			/* Delete blocked bundles from  both web-inf/lib and web-inf/osgi/bundles */
+			def blackListJarsFromWarBundles=["org.apache.felix.http.jetty-3.2.3.jar",
+							   "org.apache.felix.http.api-3.0.1.jar",
+							   "javax.servlet-3.0.0.jar",
+							   "javax.servlet.jsp-2.2.0.jar",
+							   "org.testng-6.9.10.jar",
+							   "velocity-tools-2.0-2.0.0.jar",
+							   "osgi.cmpn-5.0.0.jar",
+							   "org.slf4j.osgi-over-slf4j-1.7.2.jar",
+							   "javax.el-2.2.0.jar"]
+
+			def blackListJarsFromWarLib=[
+			                          "org.eclipse.gemini.blueprint.extender-8.3.2.jar",
+			                          "javax.servlet-3.0.0.jar",
+									  "javax.servlet.jsp-2.2.0.jar",
+									  "org.testng-6.9.10.jar",
+									  "velocity-tools-2.0-2.0.0.jar",
+									  "org.apache.felix.http.api-3.0.1.jar",
+									  "org.apache.felix.configadmin-1.8.8.jar",
+									  "com.ibm.db2.jcc-10.5.5.jar",
+									  "javax.el-2.2.0.jar",
+									  "oracle-jdbc-osgi_11.2.0.2.0-1.0.1.jar",
+									  "com.sap.ui5.resource-1.24.3.jar"]
+
+			def blackListJarsFromPlaform=["javax.servlet-3.0.0.jar",
+									  "javax.servlet.jsp-2.2.0.jar",
+									  "org.apache.felix.http.jetty-3.2.3.jar"]
+
+			blackListJarsFromWarBundles.eachWithIndex { jarName, index ->
+				/* println "${index+1}. Jar ${jarName}"*/
+				File fileToDelete = new File(osgiBundlesDir, jarName)
+				fileToDelete.delete()
+			}
+
+			blackListJarsFromWarLib.eachWithIndex { jarName, index ->
+				/* println "${index+1}. Jar ${jarName}"*/
+				File fileToDelete = new File(webinfLibDir, jarName)
+				fileToDelete.delete()
+			}
+
+			blackListJarsFromPlaform.eachWithIndex { jarName, index ->
+				/* println "${index+1}. Jar ${jarName}"*/
+				File fileToDelete = new File(platformOsgiBundlesDir, jarName)
+				fileToDelete.delete()
+			}
+			
+			
+				  /*Delete bundles from web-inf/osgi/bundles which are present in web-inf/lib */
+			File[] ocbBundleslistFiles = osgiBundlesDir.listFiles();
+			FileCollection ocbBundlescollection = files(ocbBundleslistFiles)
+
+			ocbBundlescollection.each{ File file2 ->
+				File libFile = new File(webinfLibDir, file2.name)			
+				if(libFile.exists()){
+
+					file2.delete()
+				}
+			
+		
+			}
+
+		}
+	 }
+	}
+
+
+	 }
+  
+  
+  
+}
+
+task wrapper(type: Wrapper) {
+  jarFile = rootProject.file('.gradle-wrapper/gradle-wrapper.jar')
+}
+
+  
+	
+

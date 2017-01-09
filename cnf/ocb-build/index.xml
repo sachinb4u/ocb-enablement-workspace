@@ -1,0 +1,2590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1481273108944" name="OCB Build" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="biz.aQute.junit"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="3.3.0.201609221907"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="e26377140e88fa885218447b3f2a0983969fc1b0806a3df0907488b38a54ab95"/>
+      <attribute name="url" value="biz.aQute.junit/biz.aQute.junit-3.3.0.jar"/>
+      <attribute name="size" type="Long" value="357131"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="junit.extensions"/>
+      <attribute name="version" type="Version" value="3.8.2"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="junit.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="junit.framework"/>
+      <attribute name="version" type="Version" value="3.8.2"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runner.manipulation,org.junit.runner.notification"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="junit.runner"/>
+      <attribute name="version" type="Version" value="3.8.2"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="junit.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="junit.textui"/>
+      <attribute name="version" type="Version" value="3.8.2"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="junit.framework,junit.runner"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.hamcrest,org.junit.internal,org.junit.runners"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.categories"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runner.manipulation,org.junit.runners,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.max"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runner.notification"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.results"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.hamcrest,org.junit.runner,org.junit.runner.notification"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.runners"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runners,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.theories"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.experimental.theories.internal,org.junit.internal,org.junit.runners,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.theories.internal"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.experimental.theories,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.theories.suppliers"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.experimental.theories"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.hamcrest,org.junit.runner,org.junit.runner.notification"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.builders"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runner.notification,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.matchers"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.hamcrest"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.requests"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runner.manipulation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.runners"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="junit.framework,org.junit.runner,org.junit.runner.manipulation,org.junit.runner.notification"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.runners.model"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.internal,org.junit.runner,org.junit.runner.notification,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.runners.rules"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.runners.statements"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.matchers"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.hamcrest,org.hamcrest.core"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.rules"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.hamcrest,org.junit.internal,org.junit.runner,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.runner"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="junit.framework,org.junit.runner.manipulation,org.junit.runner.notification,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.runner.manipulation"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runner"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.runner.notification"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runner"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.runners"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.internal.runners,org.junit.rules,org.junit.runner,org.junit.runner.manipulation,org.junit.runner.notification,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.runners.model"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.junit.runner"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.hamcrest"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.hamcrest.core,org.hamcrest.internal"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.hamcrest.core"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.hamcrest"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.hamcrest.internal"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="biz.aQute.junit"/>
+      <attribute name="bundle-version" type="Version" value="3.3.0.201609221907"/>
+      <directive name="uses" value="org.hamcrest"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=aQute.bnd.build)(version&gt;=2.9.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=aQute.bnd.osgi)(version&gt;=2.8.0)(!(version&gt;=3.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=aQute.bnd.service)(version&gt;=4.3.0)(!(version&gt;=5.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=junit.extensions)(version&gt;=3.8.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=junit.framework)(version&gt;=3.8.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=junit.runner)(version&gt;=3.8.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.hamcrest)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.hamcrest.core)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.hamcrest.internal)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.experimental.theories)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.experimental.theories.internal)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.internal)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.internal.builders)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.internal.matchers)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.internal.requests)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.internal.runners)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.internal.runners.model)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.internal.runners.rules)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.internal.runners.statements)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.matchers)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.rules)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.runner)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.runner.manipulation)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.runner.notification)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.runners)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.junit.runners.model)(version&gt;=4.11.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.6.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.sap.banking.blueprint.plugin"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.3.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="6ba5fcc90fe9a588f7d70b47dc34a8d9dd02c45eea2dda34def30deb16070fb8"/>
+      <attribute name="url" value="com.sap.banking.blueprint.plugin/com.sap.banking.blueprint.plugin-1.3.0.jar"/>
+      <attribute name="size" type="Long" value="19377"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.sap.banking.blueprint.plugin"/>
+      <attribute name="bundle-version" type="Version" value="1.3.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.sap.banking.blueprint.plugin"/>
+      <attribute name="bundle-version" type="Version" value="1.3.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.sap.banking.blueprint.plugin"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="com.sap.banking.blueprint.plugin"/>
+      <attribute name="bundle-version" type="Version" value="1.3.0"/>
+      <directive name="uses" value="aQute.bnd.osgi,aQute.bnd.service,javax.xml.transform"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.sap.banking.dozer.plugin"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.sap.banking.blueprint.plugin"/>
+      <attribute name="bundle-version" type="Version" value="1.3.0"/>
+      <directive name="uses" value="aQute.bnd.osgi,aQute.lib.spring"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.sap.banking.edm.plugin"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.sap.banking.blueprint.plugin"/>
+      <attribute name="bundle-version" type="Version" value="1.3.0"/>
+      <directive name="uses" value="aQute.bnd.osgi,aQute.lib.spring"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.sap.banking.validations.plugin"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.sap.banking.blueprint.plugin"/>
+      <attribute name="bundle-version" type="Version" value="1.3.0"/>
+      <directive name="uses" value="aQute.bnd.osgi,aQute.lib.spring"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=aQute.bnd.component)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=aQute.bnd.header)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=aQute.bnd.osgi)(version&gt;=2.4.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=aQute.bnd.service)(version&gt;=4.1.0)(!(version&gt;=5.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=aQute.lib.spring)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=aQute.service.reporter)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.transform)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.transform.stream)"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="javax.el"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="2.2.0.v201108011116"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="e7aac859a07484c032b7c89f2d6ddf64b2ca55fa237b63e3eb61a89f2239f076"/>
+      <attribute name="url" value="javax.el/javax.el-2.2.0.jar"/>
+      <attribute name="size" type="Long" value="52319"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="javax.el"/>
+      <attribute name="bundle-version" type="Version" value="2.2.0.v201108011116"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="javax.el"/>
+      <attribute name="bundle-version" type="Version" value="2.2.0.v201108011116"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="javax.el"/>
+      <attribute name="version" type="Version" value="2.2.0"/>
+      <attribute name="bundle-symbolic-name" value="javax.el"/>
+      <attribute name="bundle-version" type="Version" value="2.2.0.v201108011116"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet)(version&gt;=2.5.0))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet.http)(version&gt;=2.5.0))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.5))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="javax.servlet.jsp"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="2.2.0.v201112011158"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="51e040b72b57e3708b6fcd7c4b68f4edc0d768c6e9a1579e6e957fdaec03c844"/>
+      <attribute name="url" value="javax.servlet.jsp/javax.servlet.jsp-2.2.0.jar"/>
+      <attribute name="size" type="Long" value="107235"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="javax.servlet.jsp"/>
+      <attribute name="bundle-version" type="Version" value="2.2.0.v201112011158"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="javax.servlet.jsp"/>
+      <attribute name="bundle-version" type="Version" value="2.2.0.v201112011158"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="javax.servlet.jsp"/>
+      <attribute name="version" type="Version" value="2.2.0"/>
+      <attribute name="bundle-symbolic-name" value="javax.servlet.jsp"/>
+      <attribute name="bundle-version" type="Version" value="2.2.0.v201112011158"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="javax.servlet.jsp.el"/>
+      <attribute name="version" type="Version" value="2.2.0"/>
+      <attribute name="bundle-symbolic-name" value="javax.servlet.jsp"/>
+      <attribute name="bundle-version" type="Version" value="2.2.0.v201112011158"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="javax.servlet.jsp.resources"/>
+      <attribute name="version" type="Version" value="2.2.0"/>
+      <attribute name="bundle-symbolic-name" value="javax.servlet.jsp"/>
+      <attribute name="bundle-version" type="Version" value="2.2.0.v201112011158"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="javax.servlet.jsp.tagext"/>
+      <attribute name="version" type="Version" value="2.2.0"/>
+      <attribute name="bundle-symbolic-name" value="javax.servlet.jsp"/>
+      <attribute name="bundle-version" type="Version" value="2.2.0.v201112011158"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.el)(version&gt;=2.2.0))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet)(version&gt;=2.6.0))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet.http)(version&gt;=2.6.0))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="javax.servlet"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="3.0.0.v201103241009"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="73cdd0a9d648a2c8a4183d0fd6ade5e6f2ed03161a048074ac18229e8583ed03"/>
+      <attribute name="url" value="javax.servlet/javax.servlet-3.0.0.jar"/>
+      <attribute name="size" type="Long" value="200390"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="javax.servlet"/>
+      <attribute name="bundle-version" type="Version" value="3.0.0.v201103241009"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="javax.servlet"/>
+      <attribute name="bundle-version" type="Version" value="3.0.0.v201103241009"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="javax.servlet"/>
+      <attribute name="version" type="Version" value="3.0.0"/>
+      <attribute name="bundle-symbolic-name" value="javax.servlet"/>
+      <attribute name="bundle-version" type="Version" value="3.0.0.v201103241009"/>
+      <directive name="uses" value="javax.servlet.annotation,javax.servlet.descriptor"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="javax.servlet.annotation"/>
+      <attribute name="version" type="Version" value="3.0.0"/>
+      <attribute name="bundle-symbolic-name" value="javax.servlet"/>
+      <attribute name="bundle-version" type="Version" value="3.0.0.v201103241009"/>
+      <directive name="uses" value="javax.servlet"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="javax.servlet.descriptor"/>
+      <attribute name="version" type="Version" value="3.0.0"/>
+      <attribute name="bundle-symbolic-name" value="javax.servlet"/>
+      <attribute name="bundle-version" type="Version" value="3.0.0.v201103241009"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="javax.servlet.http"/>
+      <attribute name="version" type="Version" value="3.0.0"/>
+      <attribute name="bundle-symbolic-name" value="javax.servlet"/>
+      <attribute name="bundle-version" type="Version" value="3.0.0.v201103241009"/>
+      <directive name="uses" value="javax.servlet"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="javax.servlet.resources"/>
+      <attribute name="version" type="Version" value="3.0.0"/>
+      <attribute name="bundle-symbolic-name" value="javax.servlet"/>
+      <attribute name="bundle-version" type="Version" value="3.0.0.v201103241009"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.5))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.apache.felix.framework"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="5.4.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="fa81cb8e91a099625008c69b6062abebc0be4e0bd59f11e080e1d68845516746"/>
+      <attribute name="url" value="org.apache.felix.framework/org.apache.felix.framework-5.4.0.jar"/>
+      <attribute name="size" type="Long" value="678521"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+      <attribute name="version" type="Version" value="1.8.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.dto"/>
+      <attribute name="version" type="Version" value="1.8.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.bundle"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.resolver"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.framework.wiring"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.service"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.framework.wiring"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.launch"/>
+      <attribute name="version" type="Version" value="1.2.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.namespace"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.resource"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.startlevel"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.startlevel.dto"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+      <attribute name="version" type="Version" value="1.2.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.framework,org.osgi.resource"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring.dto"/>
+      <attribute name="version" type="Version" value="1.2.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.dto,org.osgi.resource.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.resource"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.resource.dto"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.packageadmin"/>
+      <attribute name="version" type="Version" value="1.2.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.startlevel"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.url"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.resolver"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.resource"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+      <attribute name="version" type="Version" value="1.5.1"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.dto"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.framework"/>
+      <attribute name="bundle-version" type="Version" value="5.4.0"/>
+    </capability>
+    <capability namespace="osgi.contract">
+      <attribute name="osgi.contract" value="OSGiFramework"/>
+      <directive name="uses" value="org.osgi.framework,org.osgi.framework.dto,org.osgi.framework.hooks.bundle,org.osgi.framework.hooks.resolver,org.osgi.framework.hooks.service,org.osgi.framework.hooks.weaving,org.osgi.framework.launch,org.osgi.framework.namespace,org.osgi.framework.startlevel,org.osgi.framework.startlevel.dto,org.osgi.framework.wiring,org.osgi.framework.wiring.dto,org.osgi.resource,org.osgi.resource.dto,org.osgi.service.packageadmin,org.osgi.service.startlevel,org.osgi.service.url,org.osgi.service.resolver,org.osgi.util.tracker,org.osgi.dto"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.6))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.apache.felix.gogo.command"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="0.16.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="c69fb18ee8f9d504f123dfe1a14e10cde853d66713fd960ab10da311642bcaf1"/>
+      <attribute name="url" value="org.apache.felix.gogo.command/org.apache.felix.gogo.command-0.16.0.jar"/>
+      <attribute name="size" type="Long" value="52560"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.apache.felix.gogo.command"/>
+      <attribute name="bundle-version" type="Version" value="0.16.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.apache.felix.gogo.command"/>
+      <attribute name="bundle-version" type="Version" value="0.16.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log"/>
+      <attribute name="version" type="Version" value="1.3.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.gogo.command"/>
+      <attribute name="bundle-version" type="Version" value="0.16.0"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <attribute name="status" value="provisional"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.service.command)(version&gt;=0.10.0)(!(version&gt;=1.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.packageadmin)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.startlevel)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.apache.felix.gogo.runtime"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="0.16.2"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="d7e6ae493a7e8f7ab1410e4431244e661e9ac2e3cbe6c78cb080bae5f9396b11"/>
+      <attribute name="url" value="org.apache.felix.gogo.runtime/org.apache.felix.gogo.runtime-0.16.2.jar"/>
+      <attribute name="size" type="Long" value="125027"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.apache.felix.gogo.runtime"/>
+      <attribute name="bundle-version" type="Version" value="0.16.2"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.apache.felix.gogo.runtime"/>
+      <attribute name="bundle-version" type="Version" value="0.16.2"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.felix.service.command"/>
+      <attribute name="version" type="Version" value="0.16.2"/>
+      <attribute name="status" value="provisional"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.gogo.runtime"/>
+      <attribute name="bundle-version" type="Version" value="0.16.2"/>
+      <directive name="mandatory" value="status"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.felix.gogo.api"/>
+      <attribute name="version" type="Version" value="0.16.2"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.gogo.runtime"/>
+      <attribute name="bundle-version" type="Version" value="0.16.2"/>
+      <directive name="uses" value="org.apache.felix.service.command"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.felix.service.threadio"/>
+      <attribute name="version" type="Version" value="0.16.2"/>
+      <attribute name="status" value="provisional"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.gogo.runtime"/>
+      <attribute name="bundle-version" type="Version" value="0.16.2"/>
+      <directive name="mandatory" value="status"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="org.apache.felix.service.threadio.ThreadIO"/>
+      <directive name="effective" value="active"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="org.apache.felix.service.command.CommandProcessor"/>
+      <directive name="effective" value="active"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.gogo.api)(version&gt;=0.16.2))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <attribute name="status" value="provisional"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.service.command)(version&gt;=0.16.2))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <attribute name="status" value="provisional"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.service.threadio)(version&gt;=0.16.2))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.osgi.framework)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.osgi.service.event)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.osgi.util.tracker)"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.apache.felix.gogo.shell"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="0.12.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="fb34b44d5ed44e2e861c4df3e38a28a16472cf968cf351ab097652e9c3273650"/>
+      <attribute name="url" value="org.apache.felix.gogo.shell/org.apache.felix.gogo.shell-0.12.0.jar"/>
+      <attribute name="size" type="Long" value="54420"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.apache.felix.gogo.shell"/>
+      <attribute name="bundle-version" type="Version" value="0.12.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.apache.felix.gogo.shell"/>
+      <attribute name="bundle-version" type="Version" value="0.12.0"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <attribute name="status" value="provisional"/>
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.service.command)(version&gt;=0.10.0))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.osgi.framework)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.osgi.service.startlevel)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.osgi.util.tracker)"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.apache.felix.http.jetty"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="005ea89dde6faf57888600204200dd22ad564c4fbf340a18abe753c9dcbc9ecd"/>
+      <attribute name="url" value="org.apache.felix.http.jetty/org.apache.felix.http.jetty-3.2.3.jar"/>
+      <attribute name="size" type="Long" value="1785495"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.http"/>
+      <attribute name="version" type="Version" value="1.2.1"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.http.context"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet.http,org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.http.runtime"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.osgi.service.http.runtime.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.http.runtime.dto"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.osgi.dto,org.osgi.framework.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.http.whiteboard"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.felix.http.api"/>
+      <attribute name="version" type="Version" value="2.0.6"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet,org.osgi.service.http"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.http"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.util,org.eclipse.jetty.util.log,org.eclipse.jetty.util.resource"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.io"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.util.log,org.eclipse.jetty.util.thread"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.io.ssl"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.net.ssl,org.eclipse.jetty.io"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.jmx"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.management,javax.management.remote,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.security"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.security.auth,javax.servlet,javax.servlet.annotation,javax.servlet.http,org.eclipse.jetty.server,org.eclipse.jetty.server.handler,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.security"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.security.authentication"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.security.auth,javax.servlet,javax.servlet.http,org.eclipse.jetty.security,org.eclipse.jetty.server"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.server"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.net.ssl,javax.security.auth,javax.servlet,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.io,org.eclipse.jetty.io.ssl,org.eclipse.jetty.server.handler,org.eclipse.jetty.server.session,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.log,org.eclipse.jetty.util.resource,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.server.handler"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.descriptor,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.io,org.eclipse.jetty.server,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.log,org.eclipse.jetty.util.resource"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.server.handler.jmx"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.jmx,org.eclipse.jetty.server.handler,org.eclipse.jetty.util.annotation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.server.jmx"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.jmx,org.eclipse.jetty.server,org.eclipse.jetty.util.annotation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.server.nio"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.io,org.eclipse.jetty.server,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.server.session"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,javax.sql,org.eclipse.jetty.http,org.eclipse.jetty.server,org.eclipse.jetty.server.handler,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.statistic"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.server.session.jmx"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.server.handler.jmx"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.servlet"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.descriptor,javax.servlet.http,org.eclipse.jetty.http,org.eclipse.jetty.security,org.eclipse.jetty.server,org.eclipse.jetty.server.handler,org.eclipse.jetty.server.session,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.servlet.jmx"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.jmx"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.servlet.listener"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.eclipse.jetty.util.component,org.eclipse.jetty.util.log,org.eclipse.jetty.util.thread"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util.annotation"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util.component"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.util.annotation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util.log"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.util.annotation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util.log.jmx"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.jmx,org.eclipse.jetty.util.annotation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util.preventers"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.util.component,org.eclipse.jetty.util.log"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util.resource"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util.security"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util.ssl"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.net.ssl,org.eclipse.jetty.util.component,org.eclipse.jetty.util.resource"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util.statistic"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.util.thread"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.webapp"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet,org.eclipse.jetty.security,org.eclipse.jetty.server,org.eclipse.jetty.server.handler,org.eclipse.jetty.server.session,org.eclipse.jetty.servlet,org.eclipse.jetty.util,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.resource,org.eclipse.jetty.xml"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.api"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.api.extensions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.api.annotations"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.api.extensions"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.api"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.api.io"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.api"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.api.util"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.client"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.io,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.util.thread,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.client.io,org.eclipse.jetty.websocket.client.masks,org.eclipse.jetty.websocket.common.io.http"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.client.io"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.net.ssl,org.eclipse.jetty.io,org.eclipse.jetty.util,org.eclipse.jetty.util.component,org.eclipse.jetty.util.ssl,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.client,org.eclipse.jetty.websocket.client.masks,org.eclipse.jetty.websocket.common,org.eclipse.jetty.websocket.common.events,org.eclipse.jetty.websocket.common.io"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.client.masks"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.common"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.client.mux"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.common,org.eclipse.jetty.websocket.common.extensions.mux,org.eclipse.jetty.websocket.common.extensions.mux.add,org.eclipse.jetty.websocket.common.extensions.mux.op"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.io,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.common.events,org.eclipse.jetty.websocket.common.io"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.events"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.common"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.extensions"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.io,org.eclipse.jetty.util.annotation,org.eclipse.jetty.util.component,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.common"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.extensions.compress"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.common.extensions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.extensions.fragment"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.common.extensions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.extensions.identity"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.util.annotation,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.common.extensions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.extensions.mux"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.io,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.common,org.eclipse.jetty.websocket.common.extensions,org.eclipse.jetty.websocket.common.extensions.mux.add,org.eclipse.jetty.websocket.common.extensions.mux.op,org.eclipse.jetty.websocket.common.io"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.extensions.mux.add"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.common,org.eclipse.jetty.websocket.common.extensions.mux,org.eclipse.jetty.websocket.common.extensions.mux.op"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.extensions.mux.op"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.common.extensions.mux"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.io"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.io,org.eclipse.jetty.util,org.eclipse.jetty.util.thread,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.common"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.io.http"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.io.payload"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.util,org.eclipse.jetty.websocket.api.extensions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.common.message"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.common,org.eclipse.jetty.websocket.common.events"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.server"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.eclipse.jetty.io,org.eclipse.jetty.server,org.eclipse.jetty.server.handler,org.eclipse.jetty.util.component,org.eclipse.jetty.util.thread,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions,org.eclipse.jetty.websocket.common,org.eclipse.jetty.websocket.common.events,org.eclipse.jetty.websocket.common.io,org.eclipse.jetty.websocket.servlet"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.server.mux"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.http,org.eclipse.jetty.io,org.eclipse.jetty.server,org.eclipse.jetty.util,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.common.extensions.mux,org.eclipse.jetty.websocket.common.extensions.mux.add"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.websocket.servlet"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.eclipse.jetty.websocket.api,org.eclipse.jetty.websocket.api.extensions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.eclipse.jetty.xml"/>
+      <attribute name="version" type="Version" value="9.0.7"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.xml.sax"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.felix.http.jetty"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.http.jetty"/>
+      <attribute name="bundle-version" type="Version" value="3.2.3.SAP"/>
+      <directive name="uses" value="org.eclipse.jetty.server"/>
+    </capability>
+    <capability namespace="osgi.implementation">
+      <attribute name="osgi.implementation" value="osgi.http"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.osgi.service.http.context,org.osgi.service.http.whiteboard"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="org.osgi.service.http.runtime.HttpServiceRuntime"/>
+      <directive name="uses" value="org.osgi.service.http.runtime,org.osgi.service.http.runtime.dto"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="org.osgi.service.http.HttpService"/>
+      <directive name="uses" value="org.osgi.service.http,javax.servlet,javax.servlet.http"/>
+      <directive name="effective" value="active"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.imageio)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.sql)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.slf4j)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.slf4j.helpers)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.slf4j.spi)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.ietf.jgss)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.cm)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.event)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.metatype)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.useradmin)(version&gt;=1.1.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.http.api)(version&gt;=2.0.0)(!(version&gt;=2.1.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.http)(version&gt;=1.2.0)(!(version&gt;=1.3.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.http.context)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.http.runtime)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.http.runtime.dto)(version&gt;=1.0.0)(!(version&gt;=1.1.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.annotation)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.management)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.management.modelmbean)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.management.remote)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.naming)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.net.ssl)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.security.auth)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.security.cert)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet.annotation)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet.descriptor)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=javax.servlet.http)(version&gt;=3.0.0)(!(version&gt;=4.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.xml.parsers)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.apache.felix.http.jetty)(version&gt;=2.1.0)(!(version&gt;=3.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.http)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.io)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.jmx)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.security)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.server)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.server.handler)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.server.session)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.servlet)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.util)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.util.component)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.util.log)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.util.resource)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.util.ssl)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.util.thread)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.eclipse.jetty.webapp)(version&gt;=9.0.0)(!(version&gt;=10.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.dto)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.dto)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework.wiring)(version&gt;=1.2.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.util.tracker)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax.helpers)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mortbay.log)(version&gt;=6.1.0)(!(version&gt;=7.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mortbay.util.ajax)(version&gt;=6.1.0)(!(version&gt;=7.0.0)))"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.apache.felix.log"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.1"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="99e720ade46420b2e4c554f6e90823e61d92730e7bd8325337b7b6b228a7d290"/>
+      <attribute name="url" value="org.apache.felix.log/org.apache.felix.log-1.0.1.jar"/>
+      <attribute name="size" type="Long" value="22243"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.apache.felix.log"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.apache.felix.log"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log"/>
+      <attribute name="version" type="Version" value="1.3.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.felix.log"/>
+      <attribute name="bundle-version" type="Version" value="1.0.1"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="org.osgi.service.log.LogService"/>
+      <directive name="effective" value="active"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="org.osgi.service.log.LogReaderService"/>
+      <directive name="effective" value="active"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" value="org.osgi.service.log.LogService"/>
+      <directive name="uses" value="org.osgi.service.log"/>
+      <directive name="effective" value="active"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.4.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="4.11.0.2"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="0bcfa963954874e3e5ddd102b06ab6c1af8ec7ae862b8e2583aac15694b37331"/>
+      <attribute name="url" value="org.apache.servicemix.bundles.junit/org.apache.servicemix.bundles.junit-4.11.0.jar"/>
+      <attribute name="size" type="Long" value="302683"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.hamcrest"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.hamcrest.internal,org.hamcrest.core"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.hamcrest.internal"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.hamcrest"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.hamcrest.core"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.hamcrest"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.theories.suppliers"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.experimental.theories"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.theories"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.experimental.theories.internal,org.junit.internal,org.junit.runners.model,org.junit.runners,org.junit"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.theories.internal"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.experimental.theories,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.runners"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runner,org.junit.internal,org.junit.runner.notification,org.junit.runners.model,junit.framework,org.junit.runner.manipulation,junit.extensions,org.junit"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.hamcrest,org.junit,org.junit.runners,org.junit.runner,org.junit.runner.notification"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.runners.model"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.internal,org.junit.runner,org.junit.runners.model,org.junit.runner.notification"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.categories"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runner.manipulation,org.junit.runner,org.junit.runners,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.runner.manipulation"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runner"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.rules"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.hamcrest,org.junit,org.junit.runners.model,org.junit.internal,org.junit.internal.matchers,org.junit.runner,org.junit.matchers,org.junit.internal.runners.statements"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.runner"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runners.model,org.junit.runners,junit.framework,org.junit.internal.runners,org.junit.internal,junit.runner,org.junit.runner.notification,org.junit.runner.manipulation,org.junit.internal.requests,org.junit.internal.builders"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.runners"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.internal.runners,org.junit.runners.model,org.junit.internal.runners.model,org.junit.internal.runners.rules,org.junit.rules,org.junit.runner,org.junit.runner.notification,org.junit.internal.runners.statements,org.junit,org.junit.internal,org.junit.runner.manipulation,org.junit.internal.builders"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.matchers"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.internal.matchers,org.hamcrest.core,org.hamcrest"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.runner.notification"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runner"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.results"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runner.notification,org.junit.internal,org.hamcrest"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.max"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runners,org.junit.internal.runners,org.junit.runners.model,org.junit.internal.requests,junit.framework,org.junit.runner.notification"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.builders"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runners.model,org.junit,org.junit.runner.notification,junit.framework,org.junit.internal.runners,org.junit.runners"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental.runners"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runners,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.internal,org.hamcrest,org.junit.runners"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.runners.rules"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.rules,org.junit.runners.model,org.junit"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.matchers"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.hamcrest,org.junit.internal"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.requests"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runner,org.junit.internal.builders,org.junit.runner.manipulation,org.junit.internal.runners"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.experimental"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runners.model,org.junit.runners"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.runners.model"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.internal.runners.model,org.junit.internal.runners,org.junit.runner,org.junit.internal,org.junit"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.junit.internal.runners.statements"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.internal,org.junit.runners.model"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="junit.runner"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="junit.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="junit.textui"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="junit.framework,junit.runner"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="junit.extensions"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="junit.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="junit.framework"/>
+      <attribute name="version" type="Version" value="4.11.0"/>
+      <attribute name="bundle-symbolic-name" value="org.apache.servicemix.bundles.junit"/>
+      <attribute name="bundle-version" type="Version" value="4.11.0.2"/>
+      <directive name="uses" value="org.junit.runner.manipulation,org.junit.runner,org.junit.runner.notification,org.junit,org.junit.internal"/>
+    </capability>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.mockito.mockito-core"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="f97483ba0944b9fa133aa29638764ddbeadb51ec3dbc02074c58fa2caecd07fa"/>
+      <attribute name="url" value="org.mockito.mockito-core/org.mockito.mockito-core-1.9.5.jar"/>
+      <attribute name="size" type="Long" value="1500011"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.exceptions"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito.invocation,org.mockito.exceptions.base,org.mockito.mock,org.mockito.listeners,org.mockito.exceptions.misusing,org.mockito.exceptions.verification"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.exceptions.stacktrace"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.stubbing.answers"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.listeners"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito.invocation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.runners"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.junit.runner,org.junit.runner.notification,org.junit.runner.manipulation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.exceptions.base"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.plugins"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito.mock,org.mockito,org.mockito.invocation,org.mockito.exceptions.stacktrace"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.mock"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito,org.mockito.stubbing"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.exceptions.verification"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito.exceptions.base"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.configuration"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito,org.mockito.stubbing"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.invocation"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito,org.mockito.exceptions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.exceptions.verification.junit"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="junit.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito.stubbing,org.hamcrest,org.mockito.verification,org.mockito.listeners,org.mockito.exceptions.base,org.mockito.exceptions,org.mockito.configuration,org.mockito.invocation"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.exceptions.misusing"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito.exceptions.base"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.verification"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito.exceptions"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.mockito.stubbing"/>
+      <attribute name="version" type="Version" value="1.9.5"/>
+      <attribute name="bundle-symbolic-name" value="org.mockito.mockito-core"/>
+      <attribute name="bundle-version" type="Version" value="1.9.5"/>
+      <directive name="uses" value="org.mockito.invocation"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=junit.framework)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.tools.ant)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.tools.ant.types)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.hamcrest)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.junit)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.junit.internal.runners)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.junit.runner)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.junit.runner.manipulation)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.junit.runner.notification)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.junit.runners)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.junit.runners.model)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.configuration)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.exceptions)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.exceptions.base)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.exceptions.misusing)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.exceptions.stacktrace)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.exceptions.verification)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.exceptions.verification.junit)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.invocation)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.listeners)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.mock)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.plugins)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.runners)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.stubbing)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.stubbing.answers)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.mockito.verification)(version&gt;=1.9.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.objenesis)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.objenesis"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="c74330cc6b806c804fd37e74487b4fe5d7c2750c5e15fbc6efa13bdee1bdef80"/>
+      <attribute name="url" value="org.objenesis/org.objenesis-2.1.0.jar"/>
+      <attribute name="size" type="Long" value="41755"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.objenesis.instantiator.android"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+      <directive name="uses" value="org.objenesis,org.objenesis.instantiator"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.objenesis.instantiator.basic"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+      <directive name="uses" value="org.objenesis,org.objenesis.instantiator"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.objenesis.instantiator.gcj"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+      <directive name="uses" value="org.objenesis,org.objenesis.instantiator"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.objenesis.instantiator.jrockit"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+      <directive name="uses" value="org.objenesis,org.objenesis.instantiator"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.objenesis.instantiator"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.objenesis.instantiator.perc"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+      <directive name="uses" value="org.objenesis,org.objenesis.instantiator"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.objenesis.instantiator.sun"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+      <directive name="uses" value="org.objenesis,org.objenesis.instantiator"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.objenesis"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+      <directive name="uses" value="org.objenesis.instantiator,org.objenesis.strategy"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.objenesis.strategy"/>
+      <attribute name="version" type="Version" value="2.1.0"/>
+      <attribute name="bundle-symbolic-name" value="org.objenesis"/>
+      <attribute name="bundle-version" type="Version" value="2.1.0"/>
+      <directive name="uses" value="org.objenesis.instantiator,org.objenesis,org.objenesis.instantiator.perc,org.objenesis.instantiator.android,org.objenesis.instantiator.basic,org.objenesis.instantiator.gcj,org.objenesis.instantiator.jrockit,org.objenesis.instantiator.sun"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=COM.jrockit.reflect)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=COM.newmonics.PercClassloader)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=jrockit.vm)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=sun.reflect)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="org.slf4j.osgi-over-slf4j"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.7.2"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="c4d784a7163c920e414bbb5e2e65bcb8b379cbfee59e7104f63f1477da0a60ee"/>
+      <attribute name="url" value="org.slf4j.osgi-over-slf4j/org.slf4j.osgi-over-slf4j-1.7.2.jar"/>
+      <attribute name="size" type="Long" value="8409"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="org.slf4j.osgi-over-slf4j"/>
+      <attribute name="bundle-version" type="Version" value="1.7.2"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="org.slf4j.osgi-over-slf4j"/>
+      <attribute name="bundle-version" type="Version" value="1.7.2"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.log"/>
+      <attribute name="version" type="Version" value="1.3.0"/>
+      <attribute name="bundle-symbolic-name" value="org.slf4j.osgi-over-slf4j"/>
+      <attribute name="bundle-version" type="Version" value="1.7.2"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.framework)(version&gt;=1.5.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.osgi.service.log)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=org.slf4j)(version&gt;=1.7.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="osgi.core"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="6.0.0.201403061837"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="1c1bb435eb34cbf1f743653da38f604d45d53fbc95979053768cd3fc293cb931"/>
+      <attribute name="url" value="osgi.core/osgi.core-6.0.0.jar"/>
+      <attribute name="size" type="Long" value="475256"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.dto"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.resource"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.resource.dto"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework"/>
+      <attribute name="version" type="Version" value="1.8.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.dto"/>
+      <attribute name="version" type="Version" value="1.8.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.bundle"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.resolver"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework.wiring"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.service"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.hooks.weaving"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework.wiring"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.launch"/>
+      <attribute name="version" type="Version" value="1.2.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.namespace"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.resource"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.startlevel"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.startlevel.dto"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring"/>
+      <attribute name="version" type="Version" value="1.2.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework,org.osgi.resource"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.framework.wiring.dto"/>
+      <attribute name="version" type="Version" value="1.2.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.dto,org.osgi.resource.dto"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.condpermadmin"/>
+      <attribute name="version" type="Version" value="1.1.1"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework,org.osgi.service.permissionadmin"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.packageadmin"/>
+      <attribute name="version" type="Version" value="1.2.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.permissionadmin"/>
+      <attribute name="version" type="Version" value="1.2.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.startlevel"/>
+      <attribute name="version" type="Version" value="1.1.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.service.url"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.osgi.util.tracker"/>
+      <attribute name="version" type="Version" value="1.5.1"/>
+      <attribute name="bundle-symbolic-name" value="osgi.core"/>
+      <attribute name="bundle-version" type="Version" value="6.0.0.201403061837"/>
+      <directive name="uses" value="org.osgi.framework"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.security.auth.x500)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="velocity-tools-2.0"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="76b89738d4127fe013b2d4c8eeaadbe8c59cc8aa804eb7c92d002e8a8851df34"/>
+      <attribute name="url" value="velocity-tools-2.0/velocity-tools-2.0-2.0.0.jar"/>
+      <attribute name="size" type="Long" value="345225"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="org.apache.velocity.app,org.apache.velocity.context,org.apache.velocity.runtime.log,org.apache.velocity.tools.config"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools.config"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="org.apache.commons.beanutils,org.apache.commons.collections,org.apache.commons.digester,org.apache.velocity.runtime.log,org.apache.velocity.tools,org.xml.sax"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools.generic"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="org.apache.velocity.app,org.apache.velocity.context,org.apache.velocity.runtime.log,org.apache.velocity.tools.config,org.dom4j"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools.generic.log"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="org.apache.commons.logging,org.apache.velocity.app,org.apache.velocity.runtime,org.apache.velocity.runtime.log"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools.struts"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.apache.commons.validator,org.apache.struts.action,org.apache.struts.config,org.apache.struts.tiles,org.apache.struts.util,org.apache.velocity.context,org.apache.velocity.runtime.log,org.apache.velocity.tools.config,org.apache.velocity.tools.generic,org.apache.velocity.tools.view"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools.view"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.apache.commons.collections,org.apache.commons.digester,org.apache.commons.logging,org.apache.velocity,org.apache.velocity.app,org.apache.velocity.context,org.apache.velocity.exception,org.apache.velocity.runtime,org.apache.velocity.runtime.log,org.apache.velocity.runtime.parser.node,org.apache.velocity.runtime.resource,org.apache.velocity.runtime.resource.loader,org.apache.velocity.tools,org.apache.velocity.tools.config,org.apache.velocity.tools.generic,org.apache.velocity.util.introspection,org.xml.sax"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools.view.context"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.apache.velocity.app,org.apache.velocity.context,org.apache.velocity.tools.view"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools.view.i18n"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="org.apache.velocity.tools.view"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools.view.jsp"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="javax.servlet.jsp,javax.servlet.jsp.tagext,org.apache.velocity.app,org.apache.velocity.runtime.resource.util,org.apache.velocity.tools.view"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools.view.servlet"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.apache.commons.collections,org.apache.commons.digester,org.apache.commons.logging,org.apache.velocity.runtime,org.apache.velocity.runtime.log,org.apache.velocity.tools.view"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="org.apache.velocity.tools.view.tools"/>
+      <attribute name="version" type="Version" value="2.0.0"/>
+      <attribute name="bundle-symbolic-name" value="velocity-tools-2.0"/>
+      <attribute name="bundle-version" type="Version" value="2.0.0"/>
+      <directive name="uses" value="javax.servlet,javax.servlet.http,org.apache.velocity.tools.generic,org.apache.velocity.tools.view"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet.http)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet.jsp)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet.jsp.tagext)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.beanutils)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.beanutils.converters)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.collections)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.digester)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.lang)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.logging)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.commons.validator)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.struts.action)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.struts.config)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.struts.taglib)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.struts.tiles)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.struts.util)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.struts.validator)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.app)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.context)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.exception)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.io)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.runtime)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.runtime.log)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.runtime.parser.node)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.runtime.resource)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.runtime.resource.loader)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.runtime.resource.util)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.tools)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.tools.config)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.tools.generic)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.tools.generic.log)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.tools.view)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.tools.view.context)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.util)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.apache.velocity.util.introspection)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.dom4j)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.dom4j.io)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.xml.sax)"/>
+      <directive name="resolution" value="optional"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.7))"/>
+    </requirement>
+  </resource>
+</repository>

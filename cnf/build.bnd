@@ -1,0 +1,445 @@
+# *********************************************************************************************************************
+# Configure OSGi Bundle Repositories (OBR)
+# *********************************************************************************************************************
+-plugin.1.Local: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name = Local; \
+		pretty = true; \
+		local = ${build}/local
+
+-plugin.2.Release: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name = Release; \
+		pretty = true; \
+		local = ${build}/release
+
+-plugin.3.Templates: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name = Templates; \
+		pretty = true; \
+		local = ${build}/templates
+
+-plugin.4.OCB-Build: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name = OCB Build; \
+		pretty = true; \
+		local = ${build}/ocb-build
+		
+-plugin.5.OCB: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name = OCB Release; \
+		pretty = true; \
+		local = ${build}/ocb
+
+-plugin.6.OCB-Custom: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name = OCB Custom; \
+		pretty = true; \
+		local = ${build}/ocb-custom
+		
+plugin.7.OCB-Thirdparty: \
+	aQute.bnd.deployer.repository.LocalIndexedRepo; \
+		name = OCB Third Party; \
+		pretty = true; \
+		local = ${build}/OCB-Thirdparty
+				
+-releaserepo: Release
+-baselinerepo: Release
+
+
+
+
+# *********************************************************************************************************************
+# defines value for SNAPSHOT, if SNAPSHOT is added in Bundle-Version, it will be replaced by below defined value 
+#	i.e. timestamp. eg. 8.3.2.SNAPSHOT will be converted to 8.3.2-201610260636
+# *********************************************************************************************************************
+-snapshot: ${tstamp}
+
+
+# ***************************************************************** 
+# version constants
+# *****************************************************************
+ocb.version=8.3.2.3
+
+# ***************************************************************** 
+# Manifest Headers
+# *****************************************************************
+Bundle-Version: ${ocb.version}
+
+-provider-policy :    ${range;\[====]}
+-consumer-policy :    ${range;\[===,=+)}
+
+# *********************************************************************************************************************
+# Adds Bundle-Blueprint header to Manifest for all projects in workspace. 
+# If blueprintfiles are empty. this header won't be added.
+# If Bundle-Blueprint header is present, 
+#		XML files are processed to add packages referred to Import-Package header
+# *********************************************************************************************************************
+blueprintfiles: ${findpath;META-INF/(.*).xml}
+Bundle-Blueprint: ${blueprintfiles}
+
+
+
+# ***************************************************************** 
+# Remove Spring-Context header for API bundles
+# *****************************************************************
+-removeheaders: ${if;${isempty;${Bundle-Blueprint}};Spring-Context}
+
+# ********************************************************************************************************************* 
+# Custom Headers for Dozer, EDM and Validation xmls
+# Search for Dozer, EDM and Validation files and add Custom Headers in Manifest
+# *********************************************************************************************************************
+dozerfiles: ${findpath;(.*)dozer(.*).xml}
+edmfiles: ${findpath;(.*)Edm.xml}
+validationfiles: ${findpath;(.*)validation(.*).xml}
+
+X-Dozer: ${dozerfiles}
+X-EDM: ${edmfiles}
+X-Validations: ${validationfiles}
+
+
+# ******************************************************************************* 
+# Process Imports for bundles based on its type viz. api,config,provider
+# *******************************************************************************
+bundleContextFiles= ${findpath;META-INF/(.*)bundle(.*).xml}
+isProviderBundle:${if;${isempty;${bundleContextFiles}};false;true}
+
+checkPersistentFiles=${findpath;META-INF/(.*)persistence(.*).xml}
+isPersistenceXmlContainer: ${if;${isempty;${checkPersistentFiles}};false;true}
+
+chkConfigFiles=${if;${isempty;${dozerfiles}};false;true}|${if;${isempty;${edmfiles}};false;true}|${if;${isempty;${validationfiles}};false;true}
+isConfigBundle=${matches;${chkConfigFiles};(.*)(true)(.*)}
+
+
+aop-imports: ${if;${isProviderBundle}; \
+        org.springframework.aop, \
+		org.aopalliance.aop, \
+		org.springframework.aop.framework, \
+		org.springframework.cglib.core, \
+		org.springframework.cglib.proxy, \
+		org.springframework.cglib.reflect, \
+		com.ffusion.beans.exttransfers,\
+	    com.ffusion.beans.banking,\
+	    com.sap.banking.common.cache.beans, \
+	    com.sap.banking.common.cache.wizard.beans,\
+	     org.apache.xerces.jaxp \
+	   }
+
+eclipse-imports:${if;${isPersistenceXmlContainer}; \
+        org.eclipse.persistence.expressions, \
+		org.eclipse.persistence.internal.sessions,\
+		org.eclipse.persistence.jpa,\
+		org.eclipse.persistence.logging,\
+		org.eclipse.persistence.queries,\
+		org.eclipse.persistence.sessions,\
+		org.eclipse.persistence.sessions.broker,\
+		org.eclipse.persistence.sessions.server,\
+		javax.persistence,\
+		javax.persistence.criteria,\
+		javax.persistence.metamodel,\
+		javax.persistence.spi, \
+		org.springframework.orm,\
+		org.springframework.orm.jpa,\
+		org.springframework.orm.jpa.persistenceunit,\
+		org.springframework.orm.jpa.support,\
+		org.springframework.orm.jpa.vendor,\
+		javax.sql, \
+		com.ffusion.beans.util,\
+		com.ffusion.util,\
+		com.ffusion.util.beans,\
+		com.ffusion.util.logging,\
+		com.sap.banking.common.beans,\
+		com.ctc.wstx.stax \
+    }
+
+
+configbundle-imports: ${if;${isConfigBundle}; \
+		org.springframework.beans.factory,\
+		org.hibernate.validator, \
+		org.hibernate.validator.constraints, \
+		org.hibernate.validator.messageinterpolation, \
+		org.hibernate.validator.resourceloading, \
+		org.hibernate.validator.spi.resourceloading,\
+		com.sap.banking.common.plugins.interfaces, \
+		javax.validation.constraints, \
+		javax.validation, \
+		com.sap.banking.common.endpoint.v1_0.beans, \
+		com.sap.banking.commonconfig.validation.annotations, \
+		com.ctc.wstx.stax, \
+		org.apache.xerces.jaxp.validation \
+	}
+
+
+# ************************************************
+# Import Packages based on different bundle type
+# ************************************************
+Import-Package: \
+	${aop-imports}, \
+	${configbundle-imports}, \
+	${eclipse-imports}, \
+	*
+
+
+# *********************************************************************************************************************
+# Bnd Analyzer Plugings : Gets called for every project build and processes resources for that particular project/bundle
+# *********************************************************************************************************************
+#
+#	SpringXMLType - processes blueprint/spring xmls and adds referred packages in Import-Package
+#
+#	BlueprintAnalyzerPlugin - processes blueprint/spring xmls and adds Require-Capability and Provide-Capability
+#								header to Manifest based osgi:service and osgi:reference in xmls
+#
+#	DozerAnalyzerPlugin - refers X-Dozer manifest header conataining dozer xml paths in bundle and adds imports for
+#								all referred packages
+# 
+#	EdmAnalyzerPlugin - refers X-EDM manifest header containing edm xml paths in bundle and adds imports and
+#								all referred packages
+#
+#	ValidationsAnalyzerPlugin - refers X-Validations manifest header containing validation xml paths in bundle and  
+#								adds imports for all referred packages
+# *********************************************************************************************************************
+-pluginpath: ${workspace}/cnf/ocb-build/com.sap.banking.blueprint.plugin/com.sap.banking.blueprint.plugin-1.3.0.jar
+
+-plugin.blueprint : aQute.lib.spring.SpringXMLType
+
+-plugin.blueprint-banking : com.sap.banking.blueprint.plugin.BlueprintAnalyzerPlugin
+
+-plugin.dozer : com.sap.banking.dozer.plugin.DozerAnalyzerPlugin
+
+-plugin.edm : com.sap.banking.edm.plugin.EdmAnalyzerPlugin 
+
+-plugin.validation : com.sap.banking.validations.plugin.ValidationsAnalyzerPlugin
+
+
+
+
+
+
+# *********************************************************************************************************************
+# Change Bundle-Vendor value to your Company Name and remove ${warning} after updating name
+# *********************************************************************************************************************
+Bundle-Vendor: NextGen Bank
+
+
+
+
+# *********************************************************************************************************************
+## Bnd Project Source/Binary Options
+# *********************************************************************************************************************
+# should include source files in jar?
+-sources: false								
+#-sourcepath:           ${project}/src/main/java				# source directory 
+#src=src/main/java
+#bin=target/classes
+#testsrc=src/test/java
+#testbin=target/test-classes
+target-dir=target
+#include src/main/resource if any files present
+-includeresource.maven: ${if;${isdir;${project}/resources};resources;}
+
+# ***************************************************************** 
+# Bundle Symbolic Name 
+# *****************************************************************
+project.name=${basename;${project}}
+ocb.group.id=com.sap.banking.
+
+Bundle-SymbolicName: ${project.name}
+
+# ***************************************************************** 
+# Properties for Install and Upload gradle task 
+# *****************************************************************
+pom-groupId: com.sap.banking
+pom-artifactId: ${subst;${Bundle-SymbolicName};${ocb.group.id};;1}
+pom-version: 8.3.2
+
+# Adds Pom file to the bundle
+-pom: true,,version=8.3.2,where=META-INF/maven/pom.xml
+
+
+
+# ********************************************************************************************************************* 
+# Run options used in framework launch
+# Default: runframework is Felix 
+# *********************************************************************************************************************
+-runfw: org.apache.felix.framework;version='[5.4.0,5.4.0]'
+
+# should framework bundles be kept on multiple run, keep it false to take updated bundles on every run
+-runkeep: false 	
+
+# storage directory for osgi framework while running
+-runstorage: ${target-dir}/generated/osgi-fw-storage
+
+-runee: JavaSE-1.8
+
+
+
+
+# *********************************************************************************************************************
+# Default BuildPath for every project
+# 
+# 	Add osgi.core, junit, mockito as default buildpath for all bundles
+#
+# *********************************************************************************************************************
+-buildpath.junit:\
+	osgi.core;version=6.0,\
+	org.apache.servicemix.bundles.junit; version=4.11,\
+	org.mockito.mockito-core;version=1.9.5,\
+	org.objenesis;version=2.1.0,\
+	org.slf4j.api;version=1.7,\
+	ch.qos.logback.slf4j;version=1.0,\
+	ch.qos.logback.core;version=1.0,\
+	ch.qos.logback.classic;version=1.0
+
+# Disable Junit tests for now
+-nojunit:false
+
+# *********************************************************************************************************************
+# Include framework.properties defined values for 
+#		org.osgi.framework.system.packages
+#		felix.log.level
+#		org.osgi.framework.bootdelegation
+#		org.osgi.framework.storage.clean
+# *********************************************************************************************************************
+-include: ${workspace}/cnf/config/framework.properties
+
+-runsystempackages.extra:  ${org.osgi.framework.system.packages}
+
+#run properties for launcher to read the cnf config folder
+-runproperties.launcher: \
+	org.eclipse.gemini.blueprint.extender.internal.boot.ChainActivator.disableBlueprint=true,\
+	felix.fileinstall.dir=${workspace}/cnf/config, \
+	felix.fileinstall.noInitialDelay=true, \
+	felix.fileinstall.enableConfigSave=false, \
+	felix.fileinstall.log.level=4, \
+	gosh.args=--nointeractive 
+	
+# *********************************************************************************************************************
+#	Java VM Properties
+# *********************************************************************************************************************
+-runvm.blueprint: \
+				-Dorg.eclipse.gemini.blueprint.extender.internal.boot.ChainActivator.disableBlueprint=true
+				-Djavax.xml.parsers.DocumentBuilderFactory=com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl
+				-Djavax.xml.parsers.SAXParserFactory=com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl
+
+-runvm.options: \
+				-Xms512m \
+				-Xmx1024m
+
+# default log cofigurations
+-runvm.logging: \
+			-Dlogback.configurationFile=${workspace}/cnf/config/logback.xml
+
+-runvm.web:\
+			-Dorg.osgi.service.http.port=8888	
+	
+-runpath.db: ${env;OCB_DB_DRIVER};version=file
+
+
+
+# *********************************************************************************************************************
+#	Resolution specification to specify which requirements to be resolved. 
+#		-resolve.effective: active  - tell bnd resolved to resolve requirement with attribute effective:=active as well
+#
+# *********************************************************************************************************************
+-resolve.effective: active
+
+# ********************************************************************************************************************* 
+# Add capability/requirement to bundle for resolution, below capability/requirement assigned will be used 
+#	while resolving.
+#
+# *********************************************************************************************************************
+-augment.equinox_cm:\
+	org.eclipse.equinox.cm; \
+	capability:="osgi.service; objectClass=org.osgi.service.cm.ConfigurationAdmin"
+
+# Servlet API provides JavaServlet contract
+-augment.servlet: \
+	javax.servlet; version="3.0.0"; \
+	capability:="osgi.contract; osgi.contract=JavaServlet;version=3.0"	
+	
+-augment.context:\
+	org.springframework.context; version=3.2.14.RELEASE_1; \
+	requirement:="osgi.identity; filter:='(&(osgi.identity=org.springframework.expression)(version>=3.2.14.RELEASE))'"	
+	
+-augment.services_web_jaxws:\
+	com.sap.banking.services-web; version="8.3.2"; \
+	requirement:="osgi.identity; filter:='(&(osgi.identity=org.apache.cxf.cxf-rt-frontend-jaxws)(version>=2.7.13.sap-01))'"
+
+# olingo-odata2-core is required if olingo-odata2-api is resolved
+-augment.olingo:\
+	olingo-odata2-api; version="1.2.0"; \
+	requirement:="osgi.identity; filter:='(&(osgi.identity=olingo-odata2-core)(version>=1.2.0))'"
+
+# bonecp fragment need to added if bonecp bundle is resolved
+# fragment adds db driver imports to bonecp
+-augment.bonecp:\
+	com.jolbox.bonecp; version="0.8.0"; \
+	requirement:="osgi.identity; filter:='(&(osgi.identity=com.sap.banking.bonecp-fragment)(version>=8.3.2))'"
+
+# logback bundles need fragment to provide default logging configuration and 
+# org.eclipse.virgo.medic.log.logback package import 
+-augment.logback_classic:\
+	ch.qos.logback.classic; version="1.0.7"; \
+	requirement:="osgi.identity; filter:='(&(osgi.identity=com.sap.banking.logback-classic-fragment)(version>=8.3.2))'"
+	
+-augment.logback_core:\
+	ch.qos.logback.core; version="1.0.7"; \
+	requirement:="osgi.identity; filter:='(&(osgi.identity=com.sap.banking.logback-core-fragment)(version>=8.3.2))'"
+
+# felix scr bundle is required to run declarative dervices components in felix whiteboard and webconsole
+-augment.felix_scr:\
+	org.apache.felix.http.whiteboard; version="3.0.1"; \
+	requirement:="osgi.identity; filter:='(&(osgi.identity=org.apache.felix.scr)(version>=2.0.2))'"
+	
+# alertsengine uses jaxws client namespace 
+-augment.alertsengine_jaxws:\
+	com.sap.banking.alertsengine; version="8.3.2"; \
+	requirement:="osgi.identity; filter:='(&(osgi.identity=org.apache.cxf.cxf-rt-frontend-jaxws)(version>=2.7.13.sap-01))'"
+	
+# bas connector 
+-augment.basconnector: \
+            com.sap.banking.bas-connector; \
+            capability:="osgi.service; objectClass=com.sap.xi.fs_orb.global.OnlineBankingPaymentProcessingPaymentTransactionOrderEventIn, \
+                         osgi.service; objectClass=com.sap.xi.fs_orb.global.OnlineBankingPaymentProcessingPaymentTransactionOrderIn"; \
+                         
+-augment.connectorRef: \
+	com.sap.banking.bas-connector-custom-reference; \
+	capability:="osgi.service; objectClass=com.sap.banking.basconnector.businesssystemfinder.interfaces.BusinessSystemFinderUserByUserId; bas-connector=ref-impl, \
+				osgi.service; objectClass=com.sap.banking.basconnector.endpointfinder.interfaces.EndpointFinder; bas-connector=ref-impl"; \
+				
+-augment.webconsole1: \
+	org.apache.felix.webconsole; \
+	requirement:="osgi.implementation; filter:='(&(osgi.implementation=osgi.http)(version>=1.0))',\
+		osgi.service; filter:='(objectClass=org.osgi.service.http.runtime.HttpServiceRuntime)', \
+		osgi.identity;filter:='(&(osgi.identity=org.apache.felix.http.jetty)(version>=3.2))'"
+		
+augment.webconsp: \
+	org.apache.felix.webconsole; version="4.2"; \
+	requirement:="osgi.identity;filter:='(&(osgi.identity=org.apache.felix.http.jetty)(version>=3.2))'"
+			
+	
+# ***************************************************************** 
+# Run Properties for framework launch
+# *****************************************************************
+-runproperties.felix: \
+	org.osgi.framework.bootdelegation="sun.*,com.sun.*,", \
+	felix.log.level=2
+	
+-tester: biz.aQute.junit
+
+-runproperties.test: \
+	tester.trace=true, \
+	tester.continuous=true, \
+	tester.dir=testdir
+	
+	
+db-driver-imports: \
+	com.sybase.jdbc2.jdbc;resolution:=optional, \
+	com.sybase.jdbc4.jdbc;resolution:=optional, \
+	COM.ibm.db2.jdbc.app;resolution:=optional, \
+	COM.ibm.db2.jdbc.net;resolution:=optional, \
+	com.ibm.db2.jcc;resolution:=optional, \
+	COM.ibm.db2os390.sqlj.jdbc;resolution:=optional, \
+	oracle.jdbc.driver;resolution:=optional, \
+	com.jnetdirect.jsql;resolution:=optional, \
+	com.microsoft.sqlserver.jdbc;resolution:=optional
